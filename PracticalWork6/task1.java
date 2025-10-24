@@ -8,12 +8,8 @@ Class powerpoint was used as reference material.
     
    
 */
-import java.util.Arrays;
-
 public class task1 {
-
     static int[] bubbleSort(int[] arr) {
-
        for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -25,8 +21,6 @@ public class task1 {
         }
         return arr;
       }
-
-    // Selection Sort usando apenas while
     static int[] selectionSort(int[] arr){
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -41,25 +35,18 @@ public class task1 {
         }
         return arr;
     }
-
     public static void main(String[] args) {
-        int[] arr1 = {42, -3, 17, 0, 17, 9};       // para Bubble
-        int[] arr2 = {100, 7, 7, -20, 55, 1, 0};   // para Selection
-
+        int[] arr1 = {42, -3, 17, 0, 17, 9};
+        int[] arr2 = {100, 7, 7, -20, 55, 1, 0};
         int [] bArr = bubbleSort(arr1);
         int[] sArr = selectionSort(arr2);
-
         System.out.println("Bubble Sorted Array: ");
-
         for (int v : bArr) {
             System.out.print(v + " ");
         }
-
         System.out.println("\nSelection Sorted Array: ");
         for (int v : sArr) {
             System.out.print(v + " ");
         }
-
-        
     }
 }
